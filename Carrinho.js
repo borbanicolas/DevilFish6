@@ -5,7 +5,7 @@ export class Carrinho{
 
     
     _cliente
-    _valorCompra
+    _valorCompra = 0
     produtos = []
     
     set cliente(idDoCliente){
@@ -14,8 +14,9 @@ export class Carrinho{
 
      addProduto(novoProduto){
         if(novoProduto instanceof Produto){
-        const compra = novoProduto
-        this.produtos.push(compra)
+        this.produtos.push(novoProduto)
+        this._valorCompra += novoProduto.valor * novoProduto.quantidade
+
     }
 }
     

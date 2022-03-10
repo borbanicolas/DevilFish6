@@ -12,20 +12,30 @@ export class Carrinho{
         if(idDoCliente instanceof Cliente) this._cliente = idDoCliente
     }
 
-     addProduto(novoProduto){
+    
+    get cliente(){
+        return this_cliente
+    }
+    get valorCompra(){
+         return this._valorCompra
+     }
+
+
+
+    addProduto(novoProduto){
         if(novoProduto instanceof Produto){
         this.produtos.push(novoProduto)
         this._valorCompra += novoProduto.valor * novoProduto.quantidade
 
-    }
-}
-    
-   
-    get cliente(){
-        return this_cliente
+        }
     }
 
+   removerProduto(itemARemover){
+       var newArray
+       newArray = this.produtos.filter((item) => item !== itemARemover)
+       this.produtos = newArray
+       return this.produtos
+   }
     
-    
-    
-} 
+
+}

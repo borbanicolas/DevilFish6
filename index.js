@@ -20,4 +20,5 @@ carrinho1.cliente = clienteNicolas
 carrinho1.addProduto(camiseta)
 carrinho1.addProduto(calca)
 
+carrinho1.removerProduto(calca)
 console.log(carrinho1)

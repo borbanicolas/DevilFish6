@@ -5,20 +5,24 @@ import { Produto } from "./Produto.js";
 
 const clienteNicolas =  new Cliente("Nicolas","clienteNicolas", 5555)
 
-const camiseta = new Produto()
-camiseta.nome = "camiseta"
-camiseta.quantidade = 3
-camiseta.valor = 10
 
-const calca = new Produto()
-calca.quantidade = 4
-calca.nome = "calca"
-calca.valor = 10
+
+const camiseta = new Produto("camiseta", "roupa", "vermelho", "M", 10, 1)
+
+const calca = new Produto("calca", "roupa", "azul", "calca jeans", 75, 1)
+
+const jaqueta = new Produto("jaqueta", "roupa", "preto", "jaqueta jeans preta", 110, 1)
+
+
+
 
 const carrinho1 = new Carrinho()
 carrinho1.cliente = clienteNicolas
 carrinho1.addProduto(camiseta)
 carrinho1.addProduto(calca)
+carrinho1.addProduto(jaqueta)
 
 carrinho1.removerProduto(calca)
-console.log(carrinho1)
+carrinho1.alterarQuantidadeNoCarrinho(camiseta, 200 )
+
+

@@ -30,38 +30,19 @@ export class Carrinho{
         }
     }
     alterarQuantidadeNoCarrinho(alterarProduto,quantidadeAlterada){
-        for (var i = 0; i < this.produtos.length; i++) {
-            this.produtos[i][00] = this.produtos[i]['name'];
-            delete this.produtos[i]['name'];
-          }
+        var newArray 
+        var novaQuantia 
+        var index
+        if(alterarProduto instanceof Produto)
+        index = this.produtos.indexOf(alterarProduto)
+        this.produtos[index].quantidade = quantidadeAlterada
+        return this.produtos
           
     }
-
-
-
-
-
-
-    //  alterarQuantidadeNoCarrinho(_item, quantidadeAlterada){
- //       this.produtos.apply(_item => {
-  //          _item.quantidade = quantidadeAlterada;
-   //       });
-   //       console.log(this.produtos)
-  //     
- //   }
-
-
-
-
-
-
-
-
-
-   removerProduto(itemARemover){
-       if(itemARemover instanceof Produto)
+    removerProduto(itemARemover){
        var newArray
        var novoValorCompra
+       if(itemARemover instanceof Produto)
        newArray = this.produtos.filter((item) => item !== itemARemover)
        this.produtos = newArray
        novoValorCompra = this._valorCompra - itemARemover.valor

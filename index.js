@@ -23,6 +23,9 @@ carrinho1.addProduto(calca)
 carrinho1.addProduto(jaqueta)
 
 carrinho1.removerProduto(calca)
-carrinho1.alterarQuantidadeNoCarrinho(camiseta, 200 )
+carrinho1.alterarQuantidadeNoCarrinho(jaqueta, 300 )
+carrinho1.alterarQuantidadeNoCarrinho(camiseta, 20)
+
+console.log(carrinho1)
 
 

@@ -17,7 +17,7 @@ const jaqueta = new Produto("jaqueta", "roupa", "preto", "jaqueta jeans preta", 
 
 
 const carrinho1 = new Carrinho()
-carrinho1.cliente = clienteNicolas
+carrinho1.cliente = \
 carrinho1.addProduto(camiseta)
 carrinho1.addProduto(calca)
 carrinho1.addProduto(jaqueta)

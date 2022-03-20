@@ -1,9 +1,17 @@
+:root{
+    --primary: #0B090A;
+    --secondary: #9D4EDD;
+    --secondary-text: rgba(255,255,255,);
+    --text-color: rgba(255,255,255,.6);
+}
+
+
 *{
     text-decoration: none;
     font-family: "Raleway",Arial,sans-serif;
-    color: #fff;
+    color: var(--text-color);
     margin: 0;
-
+    background-color: var(--primary);
 }
 h3{
     font-size: 17px;
@@ -13,8 +21,11 @@ h2{
     font-size: 10px;
     text-align: center;
 }
+.logo{
+    color: var(--secondary-text);
+}
 .header{
-    background-color: #000;
+    background-color: var(--primary);
     
 }
 
@@ -43,6 +54,15 @@ h2{
 .header .navbar a{
     margin-left: 2rem;
 }
+#busca-icon{
+    cursor: pointer;
+    margin-left: 2rem;
+}
+
+.active{
+    display: none;
+}
+
 
 .product{
     width: 400px;
@@ -54,8 +74,15 @@ h2{
     width: 300px;
     height: auto;
 }
-
-
+.product h3 {
+    color: var(--text-color);
+    font-size: 15px;
+}
+.product h4{
+    color: var(--text-color);
+    font-size: 13px;
+    margin-top: 7px;
+}
 
 
 
@@ -69,5 +96,7 @@ h2{
     align-items: flex-end;
 }
 #shop-box{
-    background-color: #000;
+    background-color: var(--primary);
 }
+
+

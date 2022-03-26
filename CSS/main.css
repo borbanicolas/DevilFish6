@@ -1,8 +1,11 @@
+@import url(glitch.css);
+@import url(keyframe.css);
 :root{
     --primary: #0B090A;
-    --secondary: #9D4EDD;
-    --secondary-text: rgba(255,255,255,);
+    --secondary: #750617;
+    --secondary-text: rgba(255,255,255);
     --text-color: rgba(255,255,255,.6);
+    --box-shadow: 0 .5rem  1.5rem rgba(0,0,0,.1);
 }
 
 
@@ -12,6 +15,7 @@
     color: var(--text-color);
     margin: 0;
     background-color: var(--primary);
+    
 }
 h3{
     font-size: 17px;
@@ -22,13 +26,25 @@ h2{
     text-align: center;
 }
 .logo{
-    color: var(--secondary-text);
-}
-.header{
-    background-color: var(--primary);
-    
+   color: var(--text-color);
+   text-shadow: -2px 3px 2px rgba(117, 6, 23, 0.47);
 }
 
+.header{
+    background-color: var(--primary);
+    box-shadow: var(--box-shadow);
+}
+.luz{  
+    color: var(--secondary-text);
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    animation: go-back-sun 1s;
+}
+
+.luz:hover{
+    color: var(--secondary);
+}
 .header .logo-box{
     display: flex;
     width: auto;
@@ -41,7 +57,6 @@ h2{
     font-size: 30px;
 
 }
-
 .header .navbar{
     display: flex;
     align-items: center;
@@ -59,32 +74,76 @@ h2{
     margin-left: 2rem;
 }
 
-.active{
-    display: none;
+
+
+/* shop */
+
+
+
+.tabela{
+    display: flex;
+    flex-wrap: wrap
 }
-
-
-.product{
-    width: 400px;
-    height: 500px;
+.produto{
+    margin: 1%;
+    padding-top: 26px;
+    width: 31%;
+    height: 450px;
     text-align: center;
+    background-color: var(--primary);
 }
 
-.product img{
+.produto:hover{
+    cursor:pointer;
+    -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 0px 4px 15px 3px rgba(0,0,0,0); 
+    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 0px 4px 15px 3px rgba(0,0,0,0);
+    
+}
+.produto #text-price:hover{
+    color: #750617;
+}
+.produto img{
     width: 300px;
     height: auto;
 }
+.price {
+    text-align: start;
+    margin-left: 5%;
+    margin-top:4%;
+}
+
+
+
+
+
+#produtos-da-tabela:hover{
+       display: none;
+    
+}
+
+
 .product h3 {
     color: var(--text-color);
     font-size: 15px;
 }
+#preco {
+    text-align: start;
+}
 .product h4{
     color: var(--text-color);
     font-size: 13px;
+    padding-left: 14px;
     margin-top: 7px;
 }
 
-
+.active{
+    display: none;
+   
+}
+#main-frame{
+    transition: all 10s;
+    animation: transition1 4s;
+}
 
 #shop-nav{
     height: 50px;
@@ -100,3 +159,6 @@ h2{
 }
 
 
+.show{
+    display:block;
+}

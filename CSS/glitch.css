@@ -1,0 +1,16 @@
+@import url(main.css);
+.piscar{
+    color: var(--secondary);
+    animation: piscar  35s infinite;
+}
+
+@keyframes piscar {
+    0%{color: var(--secondary-text);}
+    0% {opacity: 0;}
+    25%   { opacity: 1; }
+    50% {opacity: 0;}
+    75%   { opacity: 1; }
+    75% {color: var(--secondary);}
+    100% {opacity: 0;}
+   
+}
